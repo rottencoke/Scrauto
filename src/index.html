@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>スクローと</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="https://unpkg.com/convertapi-js/lib/convertapi.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="titlePosition">
+            <div id="titleArea">
+                <div id="title">スクローと</div>
+                <div id="subTitle">PDFファイルを自動でスクロール</div>
+            </div>
+        </div>
+        <div id="fileInputArea">
+            <label for="fileInput">ファイルを選択</label>
+            <input id="fileInput" type="file" accept="application/pdf">
+        </div>
+    </header>
+    <main>
+        <div id="indexMainShow">
+            <article>
+                <section id="article1">
+                    <div>PDFファイルを自動でスクロール！！
+                        <br>
+                        <br> 自分の持っているPDFから選ぶことができる
+                        <br> 画面をクリックすることでスクロール開始
+                        <br> 好きな速度でスクロール可能
+                        <br> さらに、ファイルの特定の範囲でスクロールを繰り返すことが可能
+                        <br>タブレット端末 (iPadなどで利用可能) を使うと、楽譜をめくることなく楽器を演奏し続けることが可能
+                    </div>
+                </section>
+            </article>
+            <div id="archiveArea">
+                <div id="archiveAreaHeader">
+                    <div id="archiveAreaTitleArea">
+                        <div id="archiveAreaTitle">過去</div>
+                    </div>
+                    <div id="acBtn" class="selectMouse">全て消す</div>
+                </div>
+            </div>
+            <article>
+                <section id="article2" class="articles">
+                    <div>使い方１
+                        <br>
+                        <br>スクロールしたいPDFファイルを選択
+                        <br>自動でスクロールしたい範囲を右のスクロールバーで変更
+                        <br>画面をクリックしてみて自動スクロール開始
+                        <img title="使い方1 スクロールしてみる">
+                        <br><br>
+                    </div>
+                    <div>使い方２
+                        <br>
+                        <br>スクロールしてみてスクロール速度を右下のアイコンから変更
+                        <img title="使い方2 スクロール速度変更">
+                    </div>
+                </section>
+                <section id="article3" class="articles">
+                    <div>使い方３
+                        <br>
+                        <br>スクロールするPDfの上下の余白を削除
+                        <br>スクロールをしている際に、よりPDFの中身を連続して表示していくことが可能
+                        <img title="使い方3 余白を削除して連続して中身をスクロール">
+                        <br><br>
+                    </div>
+                    <div>使い方４
+                        <br>
+                        <br>さらに設定からその他の設定を行って、より快適にスクロールする
+                        <br>iPadなどタブレット端末でも利用可能なので、楽器を弾きながら、楽譜を自動でスクロールして表示可能
+                        <img title="使い方4 その他の設定">
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/indexMain.js?8"></script>
+</body>
+
+</html>
