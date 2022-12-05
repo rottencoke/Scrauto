@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>スクローと</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="https://unpkg.com/convertapi-js/lib/convertapi.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="scrollArea">
+        <header>
+            <div id="titlePosition">
+                <div id="titleArea">
+                    <div id="title">スクローと</div>
+                    <div id="subTitle">PDFファイルを自動でスクロール</div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="fileName" class="fileName"></div>
+            <div id="sheetArea"></div>
+        </main>
+    </div>
+    <div id="fixedBtn">
+        <div id="settingBtn" class="iconBtn" title="設定">
+            <img src="./icon/settingIcon4.png" class="iconStyle">
+        </div>
+        <div id="scrollBtn" class="iconBtn2" title="スクロール速度調整">
+            <img src="./icon/scrollDownIcon.png" id="scrollBtnImg" class="iconStyle">
+            <img src="./icon/repeat.png" id="scrollBtnRepeatImg" class="iconStyle2">
+            <div id="scrollBtnValueShowArea">
+                <div id="scrollBtnValueShow">50%</div>
+            </div>
+            <div id="scrollBtnThumb"></div>
+            <div id="scrollBtnSpeedArc"></div>
+        </div>
+    </div>
+    <div id="scrollbar" class="scrollbar">
+        <div id="scrollflag1"></div>
+        <div id="scrollflag2"></div>
+        <div id="scrollbarThumb"> </div>
+    </div>
+    <div id="modalWindow">
+        <!-- the top level items -->
+        <div id="settingMenuModal" class="settingModal">
+            <div class="smTitle">設定</div>
+            <div class="smPageBack">
+                <img src="./icon/arrowBack.png" class="smArrowBack">
+            </div>
+            <div class="smContentsArea">
+                <div id="smBasicSetting" class="smSettingTile">
+                    <div id="smBasicSettingIcon" class="iconBtn smIconBtn" title="基本設定">
+                        <img src="./icon/settingIcon4.png" class="iconStyle">
+                    </div>
+                    <div class="smSettingTitle">基本設定</div>
+                </div>
+                <div id="smScrollSetting" class="smSettingTile">
+                    <div id="smScrollSettingIcon" class="iconBtn smIconBtn" title="スクロール設定">
+                        <img src="./icon/scrollDownIcon.png" class="iconStyle">
+                    </div>
+                    <div class="smSettingTitle">スクロール<br>設定</div>
+                </div>
+                <div id="smShowSetting" class="smSettingTile">
+                    <div id="smShowSettingIcon" class="iconBtn smIconBtn" title="表示設定">
+                        <img src="./icon/showSettingIcon.png" class="iconStyle">
+                    </div>
+                    <div class="smSettingTitle">表示設定</div>
+                </div>
+
+                <!-- first level template -->
+                <!--
+                <div id="sm  Setting" class="smSettingTile">
+                    <div id="smAdvancedSettingIcon" class="iconBtn smIconBtn" title="">
+                        <img src="" class="iconStyle">
+                    </div>
+                    <div class="smSettingTitle"></div>
+                </div> -->
+
+            </div>
+        </div>
+
+        <!-- the second level items -->
+        <div id="basicSettingModal" class="settingModal">
+            <div class="smTitle">基本設定</div>
+            <div class="smPageBack">
+                <img src="./icon/arrowBack.png" class="smArrowBack">
+            </div>
+            <div class="smContentsArea">順次実装予定
+                <div></div>
+            </div>
+        </div>
+
+        <div id="scrollSettingModal" class="settingModal">
+            <div class="smTitle">スクロール設定</div>
+            <div class="smPageBack">
+                <img src="./icon/arrowBack.png" class="smArrowBack">
+            </div>
+            <div class="smContentsArea">
+                <div id="smScrollSpeedSetting" class="smContentsItems">
+                    <div class="iconBtn smIconBtn" title="スクロール速度調整">
+                        <img src="./icon/scrollDownIcon.png" class="iconStyle">
+                    </div>
+                    <div class="smContentsItemTitle">スクロール<br>速度調整</div>
+                    <div class="smContentsItemComment">スクロール速度の<br>倍率を変更します</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="showSettingModal" class="settingModal">
+            <div class="smTitle">表示設定</div>
+            <div class="smPageBack">
+                <img src="./icon/arrowBack.png" class="smArrowBack">
+            </div>
+            <div class="smContentsArea">
+                <div id="smSheetCutSetting" class="smContentsItems">
+                    <div id="smScrollSettingIcon" class="iconBtn smIconBtn" title="上下切り取り">
+                        <img src="./icon/scissors.png" class="iconStyle">
+                    </div>
+                    <div class="smContentsItemTitle">上下切り取り</div>
+                    <div class="smContentsItemComment">ページの上下を<br>切り取ります</div>
+                </div>
+                <div id="smZoomSetting" class="smContentsItems">
+                    <div id="smSettingIcon" class="iconBtn smIconBtn" title="拡大縮小">
+                        <img src="./icon/zoomInOut.png" class="iconStyle">
+                    </div>
+                    <div class="smContentsItemTitle">ページ拡大縮小</div>
+                    <div class="smContentsItemComment">表示する大きさを<br>変更します</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- second level template -->
+        <!--
+        <div id="   SettingModal" class="settingModal">
+            <div class="smTitle">   </div>
+            <div class="smPageBack">
+                <img src="./icon/arrowBack.png" class="smArrowBack">
+            </div>
+            <div class="smContentsArea">
+                <div id="sm   CutSetting" class="smContentsItems">
+                    <div id="sm   SettingIcon" class="iconBtn smIconBtn" title="">
+                        <img src="" class="iconStyle">
+                    </div>
+                    <div class="smContentsItemTitle"></div>
+                    <div class="smContentsItemComment"></div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- the third level items -->
+        <div id="sheetCutSettingModal" class="settingModal">
+            <div class="smTitle">上下切り取り</div>
+            <div class="smPageBack">
+                <img src="./icon/arrowBack.png" class="smArrowBack">
+            </div>
+            <div class="smContentsArea">
+                <div class="smContentsAreaComment">
+                    各ページの上部と下部の空白部分を切り取り、<br> スクロールした際に空白部分が出てこないようにします。
+                </div>
+                <div class="smSettingArea" id="sheetCutSettingArea">
+                    <div class="sheetCutSettingList">
+                        <input type="checkbox" id="sheetCutCheckTop" class="sheetCutCheck">
+                        <div class="sheetCutSettingListName">上部を切り取る</div>
+                        <div id="sheetCutShowTop" class="sheetCutShowStyle">
+                            <input type="text" id="sheetCutNumTop" class="sheetCutNumBox" value="0" maxlength="2">
+                            <div class="sheetCutSettingListContents">%</div>
+                        </div>
+                    </div>
+                    <div class="sheetCutSettingList">
+                        <input type="checkbox" id="sheetCutCheckBottom" class="sheetCutCheck">
+                        <div class="sheetCutSettingListName">下部を切り取る</div>
+                        <div id="sheetCutShowBottom" class="sheetCutShowStyle">
+                            <input type="text" id="sheetCutNumBottom" class="sheetCutNumBox" value="0" maxlength="2">
+                            <div class="sheetCutSettingListContents">%</div>
+                        </div>
+                    </div>
+                    <div class="sheetCutSettingList">
+                        <input type="checkbox" id="sheetCutCheckFirst" class="sheetCutCheck">
+                        <div class="sheetCutSettingListName">一枚目の上部は切り取らない</div>
+                    </div>
+                    <div class="sheetCutSettingList">
+                        <input type="checkbox" id="sheetCutCheckLast" class="sheetCutCheck">
+                        <div class="sheetCutSettingListName">最後のページの下部を<br>別に切り取る</div>
+                        <div id="sheetCutShowLast" class="sheetCutShowStyle">
+                            <input type="text" id="sheetCutNumLast" class="sheetCutNumBox" value="0" maxlength="2">
+                            <div class="sheetCutSettingListContents">%</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sheetCutPreview">
+                </div>
+            </div>
+        </div>
+
+        <div id="zoomSettingModal" class="settingModal">
+            <div class="smTitle">ページ拡大縮小</div>
+            <div class="smPageBack">
+                <img src="./icon/arrowBack.png" class="smArrowBack">
+            </div>
+            <div class="smContentsArea">
+                <div class="smContentsAreaComment">
+                    PDFファイルの表示の大きさを変更する
+                </div>
+                <div class="smSettingArea" id="zoomSettingArea">
+                    <div class="zoomSettingList">
+                        <div class="zoomSettingListName">
+                            ページ拡大率調整
+                        </div>
+                        <div id="zoomSettingListContents">
+                            <input type="range" id="zoomSettingRange" min="50" max="92" value="80" step="1">
+                            <span id="zoomSettingRangeValue">100%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="scrollSpeedSettingModal" class="settingModal">
+            <div class="smTitle">スクロール速度調整</div>
+            <div class="smPageBack">
+                <img src="./icon/arrowBack.png" class="smArrowBack">
+            </div>
+            <div class="smContentsArea">
+                <div class="smContentsAreaComment">
+                    スクロール速度の倍率を調整して、<br>同じ%でもスクロール速度を変えることができる
+                </div>
+                <div class="smSettingArea" id="scrollSpeedSettingArea">
+                    <div class="scrollSpeedSettingList">
+                        <div class="scrollSpeedSettingListName">
+                            スクロール速度倍率調整
+                        </div>
+                        <div id="scrollSpeedSettingListContents">
+                            <input type="range" id="scrollSpeedSettingRange" min="0.05" max="1" value="0.5" step="0.05">
+                            <span id="scrollSpeedSettingRangeValue">0.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- third level template -->
+        <!--
+        <div id="------template------" class="settingModal">
+            <div class="smTitle"></div>
+            <div class="smPageBack">
+                <img src="./icon/arrowBack.png" class="smArrowBack">
+            </div>
+            <div class="smContentsArea">
+                <div class="smContentsAreaComment">
+
+                </div>
+                <div class="smSettingArea" id="    SettingArea">
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <script>
+        var thumbDegPercent = 50
+        var isDraggingThumb = false
+        var scrollPosition = 0
+        var isScrollRepeating = true
+        var multiplyingSettingScrollSpeed = 0.5
+    </script>
+    <script type="text/javascript" src="js/scrollMain.js?4"></script>
+    <script type="text/javascript" src="js/scrollModal.js?2"></script>
+
+</body>
+
+</html>
