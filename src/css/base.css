@@ -1,0 +1,740 @@
+/*
+*
+*   common element
+*
+*/
+
+:root {
+    --common-background-color-1: #fafafa;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-color: var(--common-background-color-1);
+}
+
+header {
+    text-align: center;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: aliceblue;
+}
+
+#titlePosition {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+#titleArea {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#title {
+    font-size: 40px;
+    font-family: monospace;
+    color: rgb(80, 16, 163);
+}
+
+#subTitle {
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.selectMouse {
+    cursor: pointer;
+}
+
+.defaultMouse {
+    cursor: default;
+}
+
+
+/*
+*
+*   index.html element
+*
+*/
+
+
+/*
+*   header element
+*/
+
+#fileInputArea {
+    position: absolute;
+    right: 2%;
+    top: 40px;
+}
+
+label {
+    position: relative;
+    padding: 10px 40px;
+    color: #ffffff;
+    background-color: #2948a8;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+/*
+*   main element
+*/
+
+#indexMainShow {
+    display: flex;
+    flex-direction: column;
+}
+
+.deleteIcon {
+    font-size: 120%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.deleteIcon:hover {
+    color: rgb(252, 0, 0);
+}
+
+
+/*
+*   main element(#archiveArea)
+*/
+
+#archiveArea {
+    position: relative;
+    margin: 30px 10%;
+    border: solid 2px #dddddd;
+    background-color: white;
+    display: none;
+}
+
+#archiveAreaHeader {
+    position: relative;
+    padding: 5px;
+    height: 30px;
+    border-bottom: solid 2px #dddddd;
+}
+
+#archiveAreaTitleArea {
+    position: relative;
+    margin: 0 5px;
+    width: 100%;
+    text-align: center;
+}
+
+#archiveAreaTitle {
+    font-size: 20px;
+}
+
+#acBtn {
+    position: absolute;
+    top: 30%;
+    right: 3%;
+    width: 70px;
+    height: 20px;
+    font-size: 12px;
+}
+
+#acBtn:hover {
+    color: rgb(252, 0, 0);
+}
+
+.archives {
+    position: relative;
+    top: -2px;
+    height: 50px;
+    border-top: solid 2px #dddddd;
+    display: flex;
+}
+
+.selectArchiveFileArea {
+    position: relative;
+    width: 90%;
+    display: flex;
+    cursor: pointer;
+}
+
+.archiveNumber {
+    position: relative;
+    margin: auto 3%;
+    height: 24px;
+    width: 20px;
+    font-size: 19px;
+    text-align: center;
+}
+
+.archiveFileName {
+    position: relative;
+    margin: auto;
+    font-size: 15px;
+}
+
+.clearFile {
+    position: relative;
+}
+
+
+/*
+*   main element(article)
+*/
+
+article {
+    position: relative;
+    margin: 30px 10%;
+}
+
+.articles {
+    background-color: white;
+    border: solid 2px #dddddd;
+    margin: 20px 0 20px 0;
+    width: 100%;
+    height: 250px;
+}
+
+
+/*
+*  scroll.html element
+*/
+
+:root {
+    --scrollImg-width: 80%;
+    --scrollImg-height: ;
+    --scrollImg-1-height: ;
+    --scrollImg-last-height: ;
+    --scrollBtn-size: 80px;
+    --scrollBtn-thumb-width: 25px;
+    --scrollBtn-thumb-height: 8px;
+}
+
+.fileName {
+    background-color: var(--common-background-color-1);
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+#sheetArea {
+    text-align: center;
+    background-color: var(--common-background-color-1);
+}
+
+.scrollImg {
+    width: var(--scrollImg-width);
+    vertical-align: top;
+    object-fit: cover;
+    overflow: hidden;
+    min-width: 50%;
+}
+
+.scrollImgPageNumber {
+    position: relative;
+    top: 0px;
+    left: 10px;
+    margin: 0;
+    width: 40px;
+    height: 16px;
+    border-radius: 8px;
+    padding: 3px 10px;
+    background-color: #e1e1e1;
+    color: #666666;
+    font-size: 12px;
+    text-align: center;
+}
+
+.iconBtn {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #999999;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.iconBtn2 {
+    margin: auto;
+    border: solid 1px #999999;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.iconStyle {
+    position: relative;
+    margin: 10px 10px;
+    width: 30px;
+    height: 30px;
+    /*どのアイコンも色を黒くする*/
+    filter: brightness(0) invert(0);
+}
+
+.iconStyle2 {
+    position: relative;
+    margin: 10px 10px;
+    width: 14px;
+    height: 14px;
+    /*どのアイコンも色を黒くする*/
+    filter: brightness(0) invert(0);
+}
+
+#settingBtn {
+    position: fixed;
+    top: 5%;
+    right: 4.5%;
+}
+
+#fullScreenBtn {
+    position: fixed;
+    bottom: 5%;
+    left: 3%;
+}
+
+#scrollBtn {
+    position: fixed;
+    width: var(--scrollBtn-size);
+    height: var(--scrollBtn-size);
+    bottom: 5%;
+    right: 3%;
+    z-index: 1;
+}
+
+#scrollBtnImg {
+    position: absolute;
+    top: 2px;
+    left: calc(var(--scrollBtn-size) / 2 - 27px);
+    width: 36px;
+    height: 36px;
+}
+
+#scrollBtnRepeatImg {
+    position: absolute;
+    top: 30px;
+    left: 43px;
+    display: block;
+}
+
+#scrollBtnValueShowArea {
+    position: absolute;
+    top: calc(var(--scrollBtn-size) * 0.65);
+    left: 0;
+    height: 15px;
+    width: var(--scrollBtn-size);
+    text-align: center;
+}
+
+#scrollBtnValueShow {
+    position: relative;
+    margin: 0 auto;
+}
+
+#scrollBtnThumb {
+    position: absolute;
+    top: calc((-1) * var(--scrollBtn-thumb-height) / 2);
+    left: calc(var(--scrollBtn-size) / 2 - var(--scrollBtn-thumb-width) / 2);
+    width: var(--scrollBtn-thumb-width);
+    height: var(--scrollBtn-thumb-height);
+    border: solid 1px #444444;
+    border-radius: 3px;
+    background-color: #eeeeee;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+#scrollBtnSpeedArc {
+    position: relative;
+}
+
+
+/*
+*  modal window common design
+*/
+
+:root {
+    --border-color-1: #dddddd;
+}
+
+#modalWindow {
+    display: none;
+    width: 500px;
+    height: 350px;
+    background-color: var(--common-background-color-1);
+    color: #666666;
+    position: fixed;
+    text-align: center;
+    z-index: 2;
+}
+
+#modalBackground {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.smTitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: solid 2px #eeeeee;
+    border-bottom: solid 2px #eeeeee;
+    cursor: default;
+}
+
+.smContentsArea {
+    position: absolute;
+    display: flex;
+    margin: 5px 20px;
+    width: 455px;
+    height: 260px;
+}
+
+.smSettingTile {
+    text-align: center;
+    margin: auto;
+    border: solid 1px var(--border-color-1);
+    width: 100px;
+    height: 120px;
+    cursor: default;
+}
+
+.smIconBtn {
+    position: relative;
+    margin: 10px auto 0 auto;
+}
+
+.smSettingTitle {
+    position: relative;
+    margin: 10px auto 10px auto;
+}
+
+.smArrowBack {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    filter: invert(0.7);
+}
+
+
+/* second level */
+
+.smContentsItems {
+    width: 150px;
+    height: 200px;
+    margin: auto 7px;
+    border-right: solid 1px var(--border-color-1);
+    border-left: solid 1px var(--border-color-1);
+}
+
+.smContentsItemTitle {
+    margin: 20px auto;
+    font-size: 18px;
+    font-style: bold;
+    cursor: default;
+}
+
+.smContentsItemComment {
+    margin: 30px auto;
+    font-size: 13px;
+    cursor: default;
+}
+
+
+/* third level */
+
+.smContentsAreaComment {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+
+/*
+*
+* modal window each page
+*
+*/
+
+
+/*
+*   index.html modal
+*/
+
+
+/* startModal */
+
+#filePreview {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 7px;
+    left: 60px;
+    border: solid 1px var(--border-color-1);
+    overflow: scroll;
+    overflow: hidden visible;
+}
+
+.filePreviewImg {
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+}
+
+#btnToScrollPage {
+    position: absolute;
+    top: 250px;
+    left: 390px;
+    width: 50px;
+    height: 20px;
+    background-color: #2948a8;
+    color: white;
+    padding: 6px 5px;
+}
+
+
+/*
+* second level items
+*/
+
+#settingMenuModal {
+    display: block;
+}
+
+#basicSettingModal {
+    display: none;
+}
+
+#scrollSettingModal {
+    display: none;
+}
+
+#showSettingModal {
+    display: none;
+}
+
+#zoomSettingModal {
+    display: none;
+}
+
+#advancedSettingModal {
+    display: none;
+}
+
+
+/*
+* third level items
+*/
+
+.smSettingArea {
+    position: absolute;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+
+/* sheetCutSetting */
+
+:root {
+    --sheetCutPreviewImg-height: 226px;
+    --sheetCutPreviewImg-width: 160px;
+    --sheetCutPreviewImg-1-height: 226px;
+    --sheetCutPreviewImg-last-height: 226px;
+}
+
+#sheetCutSettingModal {
+    display: none;
+}
+
+#scrollSpeedSettingModal {
+    display: none;
+}
+
+#sheetCutSettingArea {
+    width: 55%;
+    height: 200px;
+    top: 50px;
+}
+
+.sheetCutSettingList {
+    position: relative;
+    width: 90%;
+    height: 35px;
+    margin: 2px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.sheetCutCheck {
+    position: relative;
+    margin: auto 0;
+}
+
+.sheetCutShowStyle {
+    margin: auto 0;
+    width: 50px;
+    height: 20px;
+}
+
+.sheetCutNumBox {
+    margin: auto 5px;
+    width: 15px;
+    height: 14px;
+}
+
+.sheetCutSettingListName {
+    margin: auto 10px auto 5px;
+}
+
+.sheetCutSettingListContents {
+    position: relative;
+    width: 30px;
+    margin-left: 5px;
+    top: -20px;
+    left: 35px;
+}
+
+#sheetCutShowTop {
+    display: none;
+}
+
+#sheetCutShowBottom {
+    display: none;
+}
+
+#sheetCutShowLast {
+    display: none;
+}
+
+#sheetCutPreview {
+    position: absolute;
+    width: 40%;
+    height: 200px;
+    left: 57%;
+    top: 60px;
+    border: solid 1px var(--border-color-1);
+    overflow: scroll;
+    overflow: hidden visible;
+}
+
+.sheetCutPreviewImg {
+    margin: 0 auto;
+    width: var(--sheetCutPreviewImg-width);
+    height: var(--sheetCutPreviewImg-height);
+    object-fit: cover;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.sheetCutPreviewImgLine {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #bbbbbb;
+}
+
+
+/* scrollSpeed */
+
+#scrollSpeedSettingArea {
+    width: 90%;
+    height: 200px;
+    top: 50px;
+}
+
+.scrollSpeedSettingList {
+    position: relative;
+    width: 90%;
+    height: 35px;
+    margin: 2px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollSpeedSettingListName {
+    position: relative;
+    width: 50%;
+    height: 20px;
+    left: 0;
+    margin: 10px 10px;
+}
+
+#scrollSpeedSettingListContents {
+    position: relative;
+    width: 70%;
+    height: 20px;
+    left: 0;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#scrollSpeedSettingRange {
+    position: relative;
+    left: 20%;
+    width: 100%;
+}
+
+#scrollSpeedSettingRangeValue {
+    position: relative;
+    left: 25%;
+}
+
+
+/* zoom */
+
+#zoomSettingArea {
+    width: 90%;
+    height: 200px;
+    top: 50px;
+}
+
+#zoomSettingList {
+    position: relative;
+    width: 90%;
+    height: 35px;
+    margin: 2px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#zoomSettingListContents {
+    position: relative;
+    width: 70%;
+    height: 20px;
+    left: 0;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#zoomSettingRange {
+    position: absolute;
+    left: 100px;
+    width: 60%;
+}
+
+#zoomSettingRangeValue {
+    position: absolute;
+    left: 300px;
+}
