@@ -30,11 +30,13 @@ source for Scrauto service
 
 以下が実際に自動スクロール機能の実装に使用しているソースコードとなる。
 
+```
 const scrollAnime = () => {
     window.scroll(0, scrollPosition)
     scrollPosition = scrollPosition + scrollSpeed
     scrollAnimeElem = setTimeout(scrollAnime, 33)
 }
+```
 
 このコード自体はたったの5行だが、この5行のコードにたどり着くのに3週間を要した。この方法では、上記の１~３の機能をすべて実装することができる。
 
